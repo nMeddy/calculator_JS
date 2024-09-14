@@ -5,14 +5,16 @@
   --bg1: #e3f9ff;
   --bg2: #3a4452;
   --primary: #06139c;
-  --secondary: #555;
+  --secondary: #fffefe;
   --danger: #f80505;
   --succes: #259e04;
   --warning: #f1970644;
   --btn1Radius: 10px;
   --btnCercle: 50%;
-  --text1: 14px;
-  --textTitle: 30px;
+  --text1: 20px;
+  --textTitle: 40px;
+  --boxShadow1: -8px -8px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* ========== GENERAL STYLE ====================== */
@@ -34,4 +36,34 @@
   background: var(--bg2);
   padding: 20px;
   border-radius: var(--btn1Radius);
+}
+.calculator form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--btn1Radius);
+  box-shadow: var(--boxShadow1);
+  background: transparent;
+  font-size: var(--text1);
+  color: var(--secondary);
+  cursor: pointer;
+  margin: 10px;
+}
+.display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+form input.equal{
+    width: 145px;
+}
+form input.operator{
+    color: #33ffd8;
 }
